@@ -53,6 +53,32 @@ footer{min-height:54px}
 @media(display-mode:standalone) and (max-width:720px){
   footer{bottom:calc(10px + env(safe-area-inset-bottom))}
 }
+</style><style>
+/* Match the other units: navigation owns a grid row and never covers lesson content. */
+@supports(-webkit-touch-callout:none){
+  .app{height:calc(100dvh - 92px)}
+}
+@media(max-width:720px){
+  footer{
+    position:static;
+    left:auto;
+    right:auto;
+    bottom:auto;
+    z-index:auto;
+    width:100%;
+    min-height:54px;
+    padding:0;
+    background:transparent;
+    border:0;
+    border-radius:0;
+    box-shadow:none;
+    backdrop-filter:none;
+  }
+  .slide{padding-bottom:12px}
+}
+@media(display-mode:standalone){
+  .app{height:100dvh}
+}
 </style><body><div class="app"><header><div class="brand"><span class="icon">👀</span><div><div class="title">Magic Joy Book 11</div><div class="unit">Unit 1 · Five Senses + like</div></div></div><div class="progress" id="progress"></div></header><main>
 <section class="slide active"><span class="tag">1 min</span><div class="kicker">Today’s mission</div><h1>What is it like?</h1><div class="goal">We will use our five senses to say what something seems like.</div><p>Look, listen, smell, taste, and feel!</p></section>
 <section class="slide"><span class="tag">Concept</span><h2>Five senses, five verbs</h2><div class="sense-grid"><div class="sense"><div class="emoji">👀</div><b>look</b></div><div class="sense"><div class="emoji">👂</div><b>sound</b></div><div class="sense"><div class="emoji">👃</div><b>smell</b></div><div class="sense"><div class="emoji">👅</div><b>taste</b></div><div class="sense"><div class="emoji">✋</div><b>feel</b></div></div><p class="hint">Use the sense in the question again in the answer.</p></section>
