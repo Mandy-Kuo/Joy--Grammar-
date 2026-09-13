@@ -25,6 +25,34 @@ footer{min-height:54px}
   footer{min-height:46px}
   .nav button,.reveal{padding:6px 8px}
 }
+</style><style>
+/* In-app browser toolbar clearance: keep controls visibly tappable above overlays. */
+@media(max-width:720px){
+  footer{
+    position:fixed;
+    left:8px;
+    right:8px;
+    bottom:calc(92px + env(safe-area-inset-bottom));
+    z-index:1000;
+    width:auto;
+    min-height:0;
+    padding:7px 8px;
+    background:rgba(255,255,255,.96);
+    border:2px solid var(--ink);
+    border-radius:16px;
+    box-shadow:0 8px 22px #17324b35;
+    backdrop-filter:blur(8px);
+  }
+  .slide{padding-bottom:88px}
+  .nav button{min-height:44px}
+}
+@media(max-width:390px){
+  footer{bottom:calc(86px + env(safe-area-inset-bottom))}
+  .nav button,.reveal{padding:7px 7px;font-size:.78rem}
+}
+@media(display-mode:standalone) and (max-width:720px){
+  footer{bottom:calc(10px + env(safe-area-inset-bottom))}
+}
 </style><body><div class="app"><header><div class="brand"><span class="icon">👀</span><div><div class="title">Magic Joy Book 11</div><div class="unit">Unit 1 · Five Senses + like</div></div></div><div class="progress" id="progress"></div></header><main>
 <section class="slide active"><span class="tag">1 min</span><div class="kicker">Today’s mission</div><h1>What is it like?</h1><div class="goal">We will use our five senses to say what something seems like.</div><p>Look, listen, smell, taste, and feel!</p></section>
 <section class="slide"><span class="tag">Concept</span><h2>Five senses, five verbs</h2><div class="sense-grid"><div class="sense"><div class="emoji">👀</div><b>look</b></div><div class="sense"><div class="emoji">👂</div><b>sound</b></div><div class="sense"><div class="emoji">👃</div><b>smell</b></div><div class="sense"><div class="emoji">👅</div><b>taste</b></div><div class="sense"><div class="emoji">✋</div><b>feel</b></div></div><p class="hint">Use the sense in the question again in the answer.</p></section>
@@ -41,4 +69,4 @@ footer{min-height:54px}
 <section class="slide"><span class="tag">Make a question 3</span><h2>🥤☕ Drink + coffee</h2><div class="question-builder"><span class="grammar-part part-what"><b>What</b><small>question word</small></span><span class="plus">+</span><span class="grammar-part part-does"><b>does</b><small>helper</small></span><span class="plus">+</span><span class="grammar-part part-subject"><b>the drink</b><small>thing</small></span><span class="plus">+</span><span class="grammar-part part-sense"><b>taste</b><small>sense verb</small></span><span class="plus">+</span><span class="grammar-part part-like"><b>like?</b><small>fixed word</small></span></div><div class="question-model"><span class="what">What</span> <span class="does">does</span> <span class="subject">the drink</span> <span class="senseword">taste</span> <span class="like">like?</span></div><div class="response-line"></div><p><span class="answer answer-structure"><span class="a-subject">It</span> <span class="a-verb">tastes</span> <span class="a-like">like</span> <span class="a-object">coffee.</span></span></p><button class="reveal">Show answer</button></section>
 <section class="slide"><span class="tag">Your turn 1</span><h2>Write by yourself.</h2><div class="prompt">What does Amy’s voice sound like? 👧🦆</div><div class="writing-line"></div><p><span class="answer answer-structure"><span class="a-subject">It</span> <span class="a-verb">sounds</span> <span class="a-like">like</span> <span class="a-object">a duck.</span></span></p><button class="reveal">Show answer</button></section>
 <section class="slide"><span class="tag">Your turn 2</span><h2>Write by yourself.</h2><div class="prompt">What does the turtle feel like? 🐢🪨</div><div class="writing-line"></div><p><span class="answer answer-structure"><span class="a-subject">It</span> <span class="a-verb">feels</span> <span class="a-like">like</span> <span class="a-object">a rock.</span></span></p><button class="reveal">Show answer</button></section>
-</main><footer><div id="counter">1 / 14</div><div class="nav"><button id="prev">← Back</button><button class="reveal" id="globalReveal">Show answer</button><button id="next">Next →</button></div></footer></div><script>const slides=[...document.querySelectorAll('.slide')],progress=document.getElementById('progress');let i=0;slides.forEach(()=>{const d=document.createElement('span');d.className='dot';progress.appendChild(d)});function render(){slides.forEach((s,n)=>s.classList.toggle('active',n===i));[...progress.children].forEach((d,n)=>d.classList.toggle('active',n===i));document.getElementById('counter').textContent=`${i+1} / ${slides.length}`;document.getElementById('prev').disabled=i===0;document.getElementById('next').disabled=i===slides.length-1}function reveal(){const s=slides[i];s.querySelectorAll('.answer').forEach(a=>a.classList.toggle('show'));s.querySelectorAll('[data-correct]').forEach(a=>a.classList.toggle('correct'))}document.getElementById('prev').onclick=()=>{if(i)i--;render()};document.getElementById('next').onclick=()=>{if(i<slides.length-1)i++;render()};document.getElementById('globalReveal').onclick=reveal;document.querySelectorAll('.slide .reveal').forEach(b=>b.onclick=reveal);document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){if(i<slides.length-1)i++;render()}if(e.key==='ArrowLeft'){if(i)i--;render()}if(e.key===' '){e.preventDefault();reveal()}});render();</script></body></html>
+</main><footer><div id="counter">1 / 14</div><div class="nav"><button id="prev">← Back</button><button class="reveal" id="globalReveal">Show answer</button><button id="next">Next →</button></div></footer></div><script>const slides=[...document.querySelectorAll('.slide')],progress=document.getElementById('progress');let i=0;slides.forEach(()=>{const d=document.createElement('span');d.className='dot';progress.appendChild(d)});function render(){slides.forEach((s,n)=>s.classList.toggle('active',n===i));[...progress.children].forEach((d,n)=>d.classList.toggle('active',n===i));document.getElementById('counter').textContent=`${i+1} / ${slides.length}`;document.getElementById('prev').disabled=i===0;document.getElementById('next').disabled=i===slides.length-1}function reveal(){const s=slides[i];s.querySelectorAll('.answer').forEach(a=>a.classList.toggle('show'));s.querySelectorAll('[data-correct]').forEach(a=>a.classList.toggle('correct'))}document.getElementById('prev').onclick=()=>{if(i)i--;render()};document.getElementById('next').onclick=()=>{if(i<slides.length-1)i++;render()};document.getElementById('globalReveal').onclick=reveal;document.querySelectorAll('.slide .reveal').forEach(b=>b.onclick=reveal);document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'){if(i<slides.length-1)i++;render()}if(e.key==='ArrowLeft'){if(i)i--;render()}if(e.key===' '){e.preventDefault();reveal()}});let touchX=0,touchY=0;const lessonMain=document.querySelector('main');lessonMain.addEventListener('touchstart',e=>{const t=e.changedTouches[0];touchX=t.clientX;touchY=t.clientY},{passive:true});lessonMain.addEventListener('touchend',e=>{const t=e.changedTouches[0],dx=t.clientX-touchX,dy=t.clientY-touchY;if(Math.abs(dx)>60&&Math.abs(dx)>Math.abs(dy)*1.4){if(dx<0&&i<slides.length-1)i++;if(dx>0&&i>0)i--;render()}},{passive:true});render();</script></body></html>
