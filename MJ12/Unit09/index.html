@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MJ12 Unit 9｜過去式與現在完成式</title>
+  <meta name="description" content="MJ12 第九課：用時間軸分辨過去式與現在完成式。">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%231d5ca9'/%3E%3Cpath d='M9 34h46M28 28v12M50 26v16' stroke='white' stroke-width='4' stroke-linecap='round'/%3E%3Ccircle cx='28' cy='34' r='5' fill='%23f5aa3d'/%3E%3Ccircle cx='50' cy='34' r='5' fill='white'/%3E%3C/svg%3E">
+  <style>
+    :root{--blue:#145aa7;--violet:#7138a2;--orange:#a94e05;--green:#16704b;--ink:#182c40;--muted:#46617b;--line:#cfdeec;--bg:#f0f6fc}
+    *{box-sizing:border-box}html{font-family:Arial,"Noto Sans TC",sans-serif;color:var(--ink);background:var(--bg)}body{margin:0}button{font:inherit;cursor:pointer}.shell{max-width:1180px;margin:auto;padding:18px 24px 145px}.top{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:15px}.title{font-size:clamp(24px,3vw,38px);font-weight:850}.count{font-size:clamp(18px,2vw,25px);font-weight:800;color:var(--muted);white-space:nowrap}.card{background:#fff;border:2px solid var(--line);border-radius:24px;padding:clamp(20px,3vw,40px);min-height:510px;box-shadow:0 8px 26px #1a487014}.phase{display:inline-block;padding:7px 17px;border-radius:22px;background:#e8f1ff;color:#195499;font-size:clamp(17px,1.7vw,22px);font-weight:800}.heading{font-size:clamp(27px,3.3vw,42px);line-height:1.2;margin:18px 0 22px}.explain{font-size:clamp(21px,2.5vw,31px);font-weight:750;line-height:1.5;margin:16px 0}.em-past{color:var(--orange)}.em-now{color:var(--violet)}.timeline{background:#f7fbff;border:2px solid #d5e4f1;border-radius:20px;padding:18px 22px;margin:15px 0 22px}.time-labels{display:flex;justify-content:space-between;gap:8px;font-size:clamp(18px,2vw,25px);font-weight:800}.time-labels span:last-child{text-align:right}.track{height:7px;background:linear-gradient(90deg,#e7ad61,#91b9e8);border-radius:8px;margin:20px 10px;position:relative}.track:before,.track:after{content:"";position:absolute;top:50%;width:17px;height:17px;transform:translateY(-50%);border-radius:50%;background:#b45d12}.track:before{left:0}.track:after{right:0;background:#175ca9}.time-captions{display:flex;justify-content:space-between;gap:12px;font-size:clamp(16px,1.7vw,22px);color:var(--muted);font-weight:700}.time-captions span:last-child{text-align:right}.sentence,.question,.answer{font-size:clamp(23px,2.75vw,35px);line-height:1.45;font-weight:750;overflow-wrap:anywhere}.sentence{margin:15px 0}.question{margin:8px 0 13px}.blue{color:var(--blue)}.violet{color:var(--violet)}.orange{color:var(--orange)}.green{color:var(--green)}.task-list{display:grid;gap:14px}.task{border:2px solid #d8e6f2;background:#f9fcff;border-radius:18px;padding:17px 20px}.task .question{font-size:clamp(21px,2.45vw,31px)}.task .answer{font-size:clamp(22px,2.5vw,32px)}.cue{font-size:clamp(18px,1.8vw,23px);font-weight:800;color:#375a7b;margin:8px 0}.blank{display:inline-block;min-width:2.8em;height:.95em;border-bottom:4px solid currentColor;vertical-align:baseline;margin:0 .08em}.blank.wide{min-width:4.3em}.write-line{width:100%;max-width:950px;height:34px;border-bottom:4px solid #526b84;margin:7px 0 18px}.choices{display:flex;flex-wrap:wrap;gap:10px;margin:12px 0}.choice{background:white;border:2px solid #c4d4e5;border-radius:13px;padding:8px 15px;font-size:clamp(19px,2vw,26px);font-weight:750}.reveal{background:#1c69b8;color:white;border:0;border-radius:14px;padding:11px 20px;min-height:52px;font-size:clamp(18px,1.7vw,23px);font-weight:850}.reveal:hover,.reveal:focus-visible{background:#104c8b}.answer-box{background:#fff7e9;border-left:7px solid #df8b3a;padding:14px 18px;border-radius:8px 16px 16px 8px;margin:12px 0 0}.answer-box[hidden]{display:none}.zh{font-size:clamp(18px,1.9vw,24px);font-weight:750;color:#5e431f;line-height:1.45;margin-top:9px}.bar{position:fixed;left:0;right:0;bottom:0;background:white;border-top:2px solid var(--line);box-shadow:0 -5px 20px #16406020;padding:12px max(20px,calc((100vw - 1140px)/2));display:flex;justify-content:space-between;gap:15px;z-index:10}.nav{border:0;border-radius:15px;background:#174f8a;color:white;font-size:clamp(19px,2vw,26px);font-weight:850;padding:12px 24px;min-width:150px;min-height:60px}.nav:disabled{background:#bac8d6;cursor:default}.nav:not(:disabled):hover{background:#0d3968}
+    @media(max-width:650px){.shell{padding:12px 12px 145px}.card{min-height:0;padding:18px}.timeline{padding:13px}.task{padding:13px}.bar{padding:10px 12px}.nav{min-width:0;flex:1;padding:10px 12px}.blank.wide{min-width:3.2em}.reveal{width:100%}}
+  </style>
+</head>
+<body>
+  <main class="shell"><header class="top"><div class="title">MJ12 Unit 9</div><div id="count" class="count" aria-live="polite"></div></header><article id="slide" class="card" aria-live="polite"></article></main>
+  <nav class="bar" aria-label="頁面導覽"><button id="back" class="nav" type="button">← Back</button><button id="next" class="nav" type="button">Next →</button></nav>
+  <script>
+    const c={s:x=>`<span class="blue">${x}</span>`,v:x=>`<span class="violet">${x}</span>`,p:x=>`<span class="orange">${x}</span>`,g:x=>`<span class="green">${x}</span>`};
+    const b=(tone='violet',width='')=>`<span class="blank ${tone} ${width}" aria-label="空格"></span>`;
+    const time=(past,now,pastText,nowText)=>`<div class="timeline"><div class="time-labels"><span class="em-past">${past}</span><span class="em-now">${now}</span></div><div class="track"></div><div class="time-captions"><span>${pastText}</span><span>${nowText}</span></div></div>`;
+    const task=(question,answer,options='',note='')=>({question,answer,options,note});
+    const slides=[
+      {phase:'Presentation',title:'過去式：說「那時候」',explain:'事情發生在<span class="em-past">已經過去的時間</span>。看到「昨天、去年、8 點」這種確定時間，先想過去式。',visual:time('8 a.m.','1 p.m. (now)','早餐在 8 點結束','現在是下午 1 點'),sentence:`${c.s('Tom')} ${c.p('finished')} his breakfast ${c.g('at 8 a.m.')}.`,note:'Tom 在早上 8 點吃完早餐。重點是「8 點」這個過去時間。'},
+      {phase:'Presentation',title:'現在完成式：連到「現在」',explain:'從之前到<span class="em-now">現在</span>，我們在說現在的結果、經驗，或持續的情況。句子用 <span class="em-now">has / have + 動詞第三態</span>。',visual:time('earlier','1 p.m. (now)','之前吃午餐','現在：午餐已經吃完'),sentence:`${c.s('Tom')} ${c.v('has finished')} his lunch.`,note:'Tom 已經吃完午餐了。現在看到的是「吃完」這個結果。'},
+      {phase:'Presentation',title:'一條線，看兩個時間',explain:'<span class="em-past">過去式</span>：只說以前那段時間。<br><span class="em-now">現在完成式</span>：從以前說到現在。',visual:time('August','October (now)','Annie 那時在美國','Annie 現在在台灣'),sentence:`${c.s('Annie')} ${c.p('lived')} in the USA for a month.<br>${c.s('Annie')} ${c.v('has lived')} in Taiwan for a month.`,note:'「for a month」兩句都可以有；關鍵是那一個月是否延續到現在。'},
+      {phase:'Practice',title:'先看時間，再選動詞',visual:time('yesterday','now','昨天，已結束','現在，已完成'),tasks:[
+        task(`I ${b()} my homework yesterday. (finish)`,`I ${c.p('finished')} my homework yesterday.`,'', 'yesterday＝昨天，已過去。'),
+        task(`I ${b()} ${b()} my homework. It is done now. (finish)`,`I ${c.v('have finished')} my homework.`,'','現在已經完成；have + finished。')
+      ]},
+      {phase:'Practice',title:'課本：9 點與現在',visual:time('9 a.m.','2–4 p.m. (now)','做餅乾：過去的時間','蛋糕：現在已做好'),tasks:[
+        task(`John and Mary ${b('orange')} cookies at 9 a.m.`,`John and Mary ${c.p('made')} cookies at 9 a.m.`),
+        task(`John and Mary ${b()} ${b()} a cake.`,`John and Mary ${c.v('have made')} a cake.`)
+      ]},
+      {phase:'Practice',title:'課本：6 點與現在',visual:time('6 p.m.','6:10–6:50 p.m. (now)','漢堡：6 點吃','麵：現在已吃完'),tasks:[
+        task(`Kevin and Nina ${b('orange')} hamburgers at 6 p.m.`,`Kevin and Nina ${c.p('ate')} hamburgers at 6 p.m.`),
+        task(`Kevin and Nina ${b()} ${b()} noodles.`,`Kevin and Nina ${c.v('have eaten')} noodles.`)
+      ]},
+      {phase:'Practice',title:'課本：去年與現在',visual:time('March–April last year','May–June (now)','去年的咖啡店工作','花店的工作延續到現在'),tasks:[
+        task(`Amy ${b('orange')} at a coffee shop for two months last year.`,`Amy ${c.p('worked')} at a coffee shop for two months last year.`),
+        task(`Amy ${b()} ${b()} at a flower shop for two months.`,`Amy ${c.v('has worked')} at a flower shop for two months.`)
+      ]},
+      {phase:'Practice',title:'動詞三態：quit、hurt',explain:'這兩個字很特別：三個形式都一樣。先自己說，再看答案。',tasks:[
+        task(`${c.v('quit')} → ${b()} → ${b()}`,`${c.v('quit')} → ${c.v('quit')} → ${c.v('quit')}`),
+        task(`${c.v('hurt')} → ${b()} → ${b()}`,`${c.v('hurt')} → ${c.v('hurt')} → ${c.v('hurt')}`),
+        task(`Dora ${b('orange')} her arm last week.`,`Dora ${c.p('hurt')} her arm last week.`,'','last week＝上週，所以用過去式；hurt 的字形不變。')
+      ]},
+      {phase:'Practice',title:'ACT：1982 到現在',visual:time('1982','now','花店開幕','從那時起一直在公園旁'),tasks:[
+        task(`The flower shop ______ in 1982. It ______ next to the park since then.`,`The flower shop ${c.p('opened')} in 1982. It ${c.v('has been')} next to the park since then.`,['A. opened; was','B. opened; has been','C. has opened; has been'],'in 1982＝確定的過去時間；since then＝從那時到現在。')
+      ]},
+      {phase:'Practice',title:'ACT：去過幾次？四個月前？',visual:time('four months ago','now','那一次去東京','到現在的經驗'),tasks:[
+        task(`How many times ______ to Tokyo?<br>Only once. I ______ there four months ago.`,`How many times ${c.v('have you been')} to Tokyo?<br>I ${c.p('went')} there four months ago.`,['A. did you go; have been','B. have you been; went','C. do you go; was going'],'問到現在為止的經驗：have you been；說出四個月前那次：went。')
+      ]},
+      {phase:'Practice',title:'ACT：看時間回答',tasks:[
+        task(`Has Josh ever taken an airplane? (before)`,`Yes, he ${c.v('has taken')} an airplane before.`,'','問到現在為止有沒有這個經驗。'),
+        task(`What food has Rose made? (ham sandwich)`,`She ${c.v('has made')} a ham sandwich.`,'','現在三明治已做好。'),
+        task(`What did Dean and Sara do yesterday? (surfing)`,`They ${c.p('went')} surfing yesterday.`,'','yesterday＝昨天。')
+      ]},
+      {phase:'Practice',title:'小考：圈出正確動詞 · 1',tasks:[
+        task(`Dora (has hurt / hurt) her arm in a volleyball game last week.`,`Dora ${c.p('hurt')} her arm in a volleyball game last week.`,'','last week＝上週。'),
+        task(`We (liked / have liked) Mitch Lee since 2019.`,`We ${c.v('have liked')} Mitch Lee since 2019.`,'','since 2019＝從 2019 年一直到現在。')
+      ]},
+      {phase:'Practice',title:'小考：圈出正確動詞 · 2',tasks:[
+        task(`Ted (didn't quit / hasn't quit) his job yet. He still goes to work every day.`,`Ted ${c.v("hasn't quit")} his job yet.`,'','yet、still：現在仍沒有離職。'),
+        task(`The students (have left / left) the classroom after they turned off the lights.`,`The students ${c.p('left')} the classroom after they turned off the lights.`,'','說的是過去先關燈、再離開的兩件事。')
+      ]},
+      {phase:'Closure',title:'小考：11:30 與現在',visual:time('11:30 a.m.','1:30 p.m. (now)','開始寫功課','現在已完成'),tasks:[
+        task(`What time did the kids start to do their homework?`,`They ${c.p('started')} to do their homework at 11:30 a.m.`),
+        task(`Have the kids finished their homework?`,`Yes, they ${c.v('have finished')} their homework.`,'','先說出時間：過去式。再看現在的結果：現在完成式。')
+      ]}
+    ];
+    let index=0;const slide=document.getElementById('slide'),count=document.getElementById('count'),back=document.getElementById('back'),next=document.getElementById('next');
+    function render(){const s=slides[index];count.textContent=`${index+1} / ${slides.length}`;let h=`<span class="phase">${s.phase}</span><h1 class="heading">${s.title}</h1>${s.explain?`<div class="explain">${s.explain}</div>`:''}${s.visual||''}${s.sentence?`<div class="sentence">${s.sentence}</div>`:''}${s.note?`<div class="zh">${s.note}</div>`:''}`;
+      if(s.tasks)h+=`<div class="task-list">${s.tasks.map((t,i)=>`<section class="task"><div class="question">${s.tasks.length>1?`${i+1}. `:''}${t.question}</div>${t.options?`<div class="choices">${t.options.map(x=>`<span class="choice">${x}</span>`).join('')}</div>`:''}<div class="write-line" aria-label="作答線"></div><button type="button" class="reveal" aria-expanded="false">Show Answer</button><div class="answer-box" hidden><div class="answer">${t.answer}</div>${t.note?`<div class="zh">${t.note}</div>`:''}</div></section>`).join('')}</div>`;
+      slide.innerHTML=h;slide.querySelectorAll('.reveal').forEach(button=>button.addEventListener('click',()=>{const box=button.nextElementSibling;box.hidden=!box.hidden;button.textContent=box.hidden?'Show Answer':'Hide Answer';button.setAttribute('aria-expanded',String(!box.hidden));}));back.disabled=index===0;next.disabled=index===slides.length-1;window.scrollTo(0,0)}
+    back.addEventListener('click',()=>{if(index>0){index--;render()}});next.addEventListener('click',()=>{if(index<slides.length-1){index++;render()}});document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'&&index<slides.length-1){index++;render()}else if(e.key==='ArrowLeft'&&index>0){index--;render()}});render();
+  </script>
+</body>
+</html>
